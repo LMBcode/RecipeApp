@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.myapp.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_burgerFragment"
+            app:destination="@id/burgerFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_pizzaFragment"
+            app:destination="@id/pizzaFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_hotdogFragment"
+            app:destination="@id/hotdogFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_pastaFragment"
+            app:destination="@id/pastaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.myapp.ui.DetailsFragment"
+        android:label="detailsfragment"
+        tools:layout="@layout/detailsfragment" >
+        <action
+            android:id="@+id/action_detailsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/burgerFragment"
+        android:name="com.example.myapp.ui.BurgerFragment"
+        android:label="burgerfragment"
+        tools:layout="@layout/burgerfragment" />
+    <fragment
+        android:id="@+id/pizzaFragment"
+        android:name="com.example.myapp.ui.PizzaFragment"
+        android:label="PizzaFragment" >
+        <action
+            android:id="@+id/action_pizzaFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hotdogFragment"
+        android:name="com.example.myapp.ui.hotdogFragment"
+        android:label="hotdogFragment" />
+    <fragment
+        android:id="@+id/pastaFragment"
+        android:name="com.example.myapp.ui.PastaFragment"
+        android:label="PastaFragment" />
+</navigation>
